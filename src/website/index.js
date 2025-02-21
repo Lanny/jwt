@@ -1,7 +1,4 @@
-import { setupNavbar } from "./navbar.js";
 import { setupTokenEditor, setTokenEditorValue } from "../editor";
-import { setupJwtCounter } from "./counter.js";
-import { setupSmoothScrolling } from "./smooth-scrolling.js";
 import { setupHighlighting } from "./highlighting.js";
 import { setupShareJwtButton } from "../share-button.js";
 import {
@@ -10,8 +7,6 @@ import {
     shareJwtButton,
     shareJwtTextElement,
 } from "./dom-elements.js";
-import { CCPAModal } from "./ccpa-modal.js";
-import { TopBanner } from "./top-banner.js";
 
 import queryString from "querystring";
 
@@ -48,12 +43,7 @@ function parseLocationQuery() {
 }
 
 // Initialization
-setupNavbar();
-setupSmoothScrolling();
 setupTokenEditor();
 parseLocationQuery();
 setupHighlighting();
-setupJwtCounter();
 setupShareJwtButton(shareJwtButton, shareJwtTextElement);
-CCPAModal();
-TopBanner();

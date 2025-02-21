@@ -1,5 +1,4 @@
 const extensionManifest = require("./manifest.json");
-const getLanguages = require("./views/website/libraries/support/get-languages.js");
 
 module.exports = (grunt) => {
     grunt.loadNpmTasks("grunt-contrib-copy");
@@ -124,15 +123,8 @@ module.exports = (grunt) => {
 
         pug: {
             website: {
-                options: {
-                    data: {
-                        languages: getLanguages(),
-                    },
-                },
                 files: {
-                    "dist/website/index.html": "views/website/index.pug",
-                    "dist/website/introduction/index.html": "views/website/introduction.pug",
-                    "dist/website/libraries/index.html": "views/website/libraries.pug",
+                    "dist/website/index.html": "views/website/index.pug"
                 },
             },
             extension: {

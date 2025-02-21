@@ -78,6 +78,7 @@
     },
     "scripts": {
         "start": "node server.js",
+        "dev": "grunt",
         "test": "grunt test",
         "test:unit": "grunt unit-tests",
         "build": "npm run build:libraries && grunt build-website",
