@@ -81,8 +81,6 @@
         "dev": "grunt",
         "test": "grunt test",
         "test:unit": "grunt unit-tests",
-        "build": "npm run build:libraries && grunt build-website",
-        "build:extension": "npm run build:libraries && grunt build-extension",
-        "build:libraries": "node libraries.js"
+        "build": " grunt build-website"
     }
 }
