@@ -1,4 +1,4 @@
-import { setupTokenEditor, setTokenEditorValue } from "../editor";
+import { setupTokenEditor, setTokenEditorValue, setAlgorithmInHeader } from "../editor";
 import { setupHighlighting } from "./highlighting.js";
 import { setupShareJwtButton } from "../share-button.js";
 import {
@@ -34,12 +34,13 @@ function parseLocationQuery() {
             }
 
             setTokenEditorValue(token);
-
-            debuggerSection.scrollIntoView(true);
-
             break;
         }
     }
+
+  if (source.algo) {
+    setAlgorithmInHeader(source.algo)
+  }
 }
 
 // Initialization

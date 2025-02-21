@@ -161,7 +161,7 @@ export function useDefaultToken(algorithm) {
     });
 }
 
-function setAlgorithmInHeader(algorithm) {
+export function setAlgorithmInHeader(algorithm) {
     eventManager.withDisabledEvents(() => {
         try {
             const header = JSON.parse(headerEditor.getValue());
