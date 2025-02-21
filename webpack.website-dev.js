@@ -6,9 +6,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
     mode: 'development',
     entry: {
-        index: './src/website/index.js',
-        libraries: './src/website/libraries/index.js',
-        "cookie-consent": './src/cookie-consent.js'
+        index: './src/website/index.js'
     },
     output: {
         filename: '[name].js',
